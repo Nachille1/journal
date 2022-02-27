@@ -1,16 +1,19 @@
 {% extends "base.html" %}
 
+{% block head %}
+<link rel="stylesheet" type="text/css" href="/static/css/1.css" />
+{% endblock %}
 {% block content %}
-<h1>Works log</h1><br>
-{% for job in list %}
+<h1 class="log">Works log</h1><br>
+{% for job in jobs_list %}
     <h3>Action #{{ job.id }}</h3>
-    <table border="1">
+    <table border="1" cellpadding="20px">
         <tr>
-            <th>Title of activity</th>
-            <th>Team leader</th>
-            <th>Duration</th>
-            <th>List of collaborators</th>
-            <th>Is finished</th>
+            <th bgcolor="gray">Title of activity</th>
+            <th bgcolor="gray">Team leader</th>
+            <th bgcolor="gray">Duration</th>
+            <th bgcolor="gray">List of collaborators</th>
+            <th bgcolor="gray">Is finished</th>
         </tr>
         <tr>
             <td>{{ job.job }}</td>
@@ -24,4 +27,5 @@
             {% endif %}
         </tr>
     </table>
+{% endfor %}
 {% endblock %}
