@@ -9,21 +9,21 @@
     <h3>Action #{{ job.id }}</h3>
     <table border="1" cellpadding="20px">
         <tr>
-            <th bgcolor="gray">Title of activity</th>
-            <th bgcolor="gray">Team leader</th>
-            <th bgcolor="gray">Duration</th>
-            <th bgcolor="gray">List of collaborators</th>
-            <th bgcolor="gray">Is finished</th>
+            <th bgcolor="bfbebb">Title of activity</th>
+            <th bgcolor="bfbebb">Team leader</th>
+            <th bgcolor="bfbebb">Duration</th>
+            <th bgcolor="bfbebb">List of collaborators</th>
+            <th bgcolor="bfbebb">Is finished</th>
         </tr>
         <tr>
-            <td>{{ job.job }}</td>
-            <td>{{ job.team_leader }}</td>
-            <td>{{ job.work_size }}</td>
-            <td>{{ job.collaborators }}</td>
+            <td bgcolor="BFCFDD">{{ job.job }}</td>
+            <td bgcolor="BFCFDD">{{ job.team_leader }}</td>
+            <td bgcolor="BFCFDD">{{ job.work_size }}</td>
+            <td bgcolor="BFCFDD">{{ job.collaborators }}</td>
             {% if job.is_finished == False %}
-                <td>Is not finished</td>
+                <td bgcolor="e3c1d7">Is not finished</td>
             {% else %}
-                <td>Finished</td>
+                <td bgcolor="82ed61">Finished</td>
             {% endif %}
         </tr>
     </table>
